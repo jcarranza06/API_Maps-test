@@ -32,7 +32,7 @@ public class Panel {
 		panel.setBounds(5, 50, 574, 415);
 		Ventana.panelBase.add(panel);
 		panel.setLayout(null);
-		
+		panel.setOpaque(false);
 		textField = new JTextField();
 		textField.setBounds(21, 11, 220, 20);
 		panel.add(textField);

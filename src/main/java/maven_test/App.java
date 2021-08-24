@@ -31,6 +31,7 @@ public class App {
 			    .build();
 		Ventana ventana = new Ventana();
 		ventana.setVisible(true);
+		Panel1.setVisible(false);
 		/*String i = "Turn \\u003cb\\u003eright\\u003c/b\\u003e onto \\u003cb\\u003eCr";
 		System.out.println(i);
 		System.out.println(i.replace("\\u003cb", "").replace("\\u003e", "").replace("\\u003c/b", ""));*/
@@ -42,7 +43,9 @@ public class App {
 			results = GeocodingApi.geocode(context,
 					busqueda).await();
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			System.out.println((results[0]));
 			System.out.println(gson.toJson(results[0]));
+			
 			Panel.setText(results[0].formattedAddress,0);
 			//Ventana.setText(results[0].addressComponents[results[0].addressComponents.length-1].longName,1);
 			Panel.setText(String.valueOf(getAlturaInfo(results[0].geometry.location).elevation), 1);
@@ -81,7 +84,7 @@ public class App {
 			System.out.println(gson.toJson(results));
 			String pasos="";
 			for (int i=0;i<results.routes[0].legs[0].steps.length;i++) {
-				pasos += limpiarHTML(results.routes[0].legs[0].steps[i].htmlInstructions)
+				pasos += /*limpiarHTML*/(results.routes[0].legs[0].steps[i].htmlInstructions)
 									+" (Distancia:"+results.routes[0].legs[0].steps[i].distance.humanReadable+", tiempo:"
 									+results.routes[0].legs[0].steps[i].duration.humanReadable+
 									") "+"  <br>";

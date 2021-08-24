@@ -30,7 +30,6 @@ public class Panel1 {
 	
 	public Panel1 (JPanel panelBase) {
 		panel1 = new JPanel();
-		
 		panel1.setForeground(Color.WHITE);
 		panel1.setBounds(5, 50, 574, 415);
 		panelBase.add(panel1);
@@ -54,7 +53,7 @@ public class Panel1 {
 		destino.setBounds(78, 36, 220, 20);
 		panel1.add(destino);
 		destino.setColumns(10);
-		
+		panel1.setOpaque(false);
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(21, 89, 450, 150);
 		panel1.add(scrollPane);
@@ -68,16 +67,19 @@ public class Panel1 {
 		buttonGroup.add(rdbtnNewRadioButton);
 		rdbtnNewRadioButton.setBounds(318, 1, 109, 23);
 		panel1.add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.setOpaque(false);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("A pie");
 		buttonGroup.add(rdbtnNewRadioButton_1);
 		rdbtnNewRadioButton_1.setBounds(318, 27, 109, 23);
 		panel1.add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton_1.setOpaque(false);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Bicicleta");
 		buttonGroup.add(rdbtnNewRadioButton_2);
 		rdbtnNewRadioButton_2.setBounds(318, 53, 109, 23);
 		panel1.add(rdbtnNewRadioButton_2);
+		rdbtnNewRadioButton_2.setOpaque(false);
 		
 		JButton buscar2 = new JButton("Buscar");
 		buscar2.addMouseListener(new MouseAdapter() {

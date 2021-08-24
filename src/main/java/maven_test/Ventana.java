@@ -29,6 +29,7 @@ public class Ventana extends JFrame {
 
 	private JPanel contentPane;
 	static JPanel panelBase;
+	private JLabel lblNewLabel;
 	
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,6 +71,11 @@ public class Ventana extends JFrame {
 		});
 		btnNewButton_1.setBounds(24, 11, 89, 23);
 		panelBase.add(btnNewButton_1);
+		ImageIcon fondo1 = new ImageIcon("C:\\Users\\juane\\eclipse-workspace\\maven_test\\src\\main\\java\\maven_test\\fondoMaps.png");
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(fondo1.getImage().getScaledInstance(600, 509, Image.SCALE_SMOOTH)));
+		lblNewLabel.setBounds(0, 0, 590, 498);
+		panelBase.add(lblNewLabel);
 		
 		
 		
